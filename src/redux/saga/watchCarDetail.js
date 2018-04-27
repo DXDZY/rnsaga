@@ -12,7 +12,7 @@ function* getDetail(action){
             form:{
                 carid:123,
             },
-            host:'mock',
+            // host:'mock',
         });
         yield put({
             type: 'carDetail/getDataSuccess',

@@ -7,8 +7,10 @@ class CarDetail extends Component {
         this.state = {  }
     }
     componentDidMount() {
+        const {params} = this.props.navigation.state;
+        const carid = params?params.carid:null;
         this.props.actions.getData({
-            carid:123,
+            carid,
         })
     }
     showLog=()=>{
@@ -21,6 +23,7 @@ class CarDetail extends Component {
         return (  
             <View>
                 <Button onPress={this.showLog} title="click"/>
+                <Button onPress={()=>this.props.navigation.goBack()} title="back"/>
             </View>
         )
     }
