@@ -5,7 +5,8 @@ import {
 } from 'react-native';
 class Login extends Component {
     static navigationOptions = {
-        title:'Home1',
+        // title:'Home1',
+        header:null,
     };
     constructor(props) {
         super(props);
